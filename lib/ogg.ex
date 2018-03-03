@@ -55,16 +55,14 @@ defmodule Ogg.Page do
     case header do
       {:halt, _} -> {:halt, file}
       {[header], file} ->
-        segments =
-          for segment_size <- header.segment_table do
+        segments = for segment_size <- header.segment_table do
             IO.binread(file, segment_size)
-          end
+        end
 
-        page =
-          %Ogg.Page{
-            header: header,
-            segments: segments
-          }
+        page = %Ogg.Page{
+          header: header,
+          segments: segments
+        }
 
         {[page], file}
     end
