@@ -1,4 +1,4 @@
-defmodule OggTools do
+defmodule ExOgg do
   def ogg_page_stream(path) do
     Stream.resource(
       fn -> File.open!(path) end,

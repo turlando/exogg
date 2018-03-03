@@ -1,9 +1,9 @@
-defmodule OggTools.Mixfile do
+defmodule ExOgg.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :oggtools,
+      app: :exogg,
       version: "0.0.1",
       elixir: "~> 1.6",
       start_permanent: Mix.env == :prod,

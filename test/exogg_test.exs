@@ -1,11 +1,11 @@
-defmodule OggToolsTest do
+defmodule ExOggTest do
   use ExUnit.Case
-  doctest OggTools
+  doctest ExOgg
 
   @path "test/resources/2ch_q6.ogg"
 
   test "read first page" do
-    stream = OggTools.ogg_page_stream(@path)
+    stream = ExOgg.ogg_page_stream(@path)
     page = stream |> Enum.take(1)
 
     assert page == [
@@ -29,7 +29,7 @@ defmodule OggToolsTest do
   end
 
   test "read second page header" do
-    stream = OggTools.ogg_page_stream(@path)
+    stream = ExOgg.ogg_page_stream(@path)
     [page] = stream |> Enum.drop(1) |> Enum.take(1)
     header = page.header
 

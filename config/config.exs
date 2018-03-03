@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :oggtools, key: :value
+#     config :exogg , key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:oggtools, :key)
+#     Application.get_env(:exogg, :key)
 #
 # You can also configure a 3rd-party app:
 #
